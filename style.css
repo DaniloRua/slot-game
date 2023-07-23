@@ -4,7 +4,7 @@
     font-family: monospace;
 }
 body{
-    background-color: rgb(249, 249, 147);
+    background-color: rgb(149, 12, 94);
 }
 .container{
 height: 100%;
@@ -13,7 +13,8 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 gap: 2rem;
-border: 1px red solid;
+color: #250926;;
+
     
 }
 .numbers-frame{
@@ -24,6 +25,11 @@ border: 1px red solid;
     border: red solid 12px;
     width: 20rem;
     height: 20rem;
+    border-radius: 2rem;
+    
+    /* animation: flip 1s ease-in-out infinite */
+    /* animation: counting ease-in-out infinite 0.5s;
+ */
     
 }
 .slot-number{
@@ -31,15 +37,76 @@ border: 1px red solid;
     border: 1px red solid;
     margin: auto;
     padding: auto;    
+    color: #360c36;;
+
 }
 
 .lever{
 
+
 }
 
 #message{
+    z-index: 1;
     display: none;
     text-align: center;
     font-size: xx-large;
     color: red;
+    
 }
+
+#button {
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 4px;
+    position: relative;
+    background-color: #e64727;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    width: 10rem;
+    text-align: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #ff0257;
+    border-radius: 100px;
+  }
+  
+  #button:hover {
+    background: #e83e3e;
+    box-shadow: 0px 2px 10px 5px #ff2600;
+    color: #49114a;;
+  }
+  
+  #button:after {
+    content: "";
+    background: #49114a;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 300%;
+    margin-top: -120%;
+    margin-left: -20%;
+    opacity: 0;
+    transition: all 1s
+  }
+  
+  #button:active:after {
+    padding: 0;
+    margin: -1px;
+    opacity: 1;
+    transition: 0s
+  }
+  
+  .button:focus { outline:0; }
+
+/* @keyframes counting {
+
+    100% {transform: translate3d(0, -20em, 0);}
+}
+
+@keyframes flip {
+    0%{transform:rotateX(0)}100%{transform:rotateX(-180deg)}
+} */

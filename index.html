@@ -7,19 +7,19 @@
     <div class="container">
         <h1>Play slot</h1>
         <div class="container-lever">
-            <button class="lever" onclick="spin()">Lever</button>
         </div>
+        <button id="button" onclick="spin()">Start</button>
         <table class="numbers-frame">
             <tbody>
                 <tr>
                     <td>
-                        <span id="number1" class="slot-number">1</span>
+                        <span id="number1" class="slot-number">7</span>
                     </td>
                     <td>
-                        <span id="number2" class="slot-number">2</span>
+                        <span id="number2" class="slot-number">7</span>
                     </td>
                     <td>
-                        <span id="number3" class="slot-number">3</span>
+                        <span id="number3" class="slot-number">7</span>
                     </td>
                 </tr>
             </tbody>
@@ -28,65 +28,16 @@
         <div id="message">
             <p>You won!</p>
         </div>
-
+        
         <audio id="won_sound">
             <source src="/win.mp3" type="audio/mpeg">
         </audio>
-    </div>
+    </div> 
 </body>
 
 
-<script>
-    const msg = document.getElementById("message");
-
-
-    function getRandomNumber() {
-        return Math.floor(Math.random() * 3) + 1;
-    }
-
-    function getElement(id) {
-        return document.getElementById(id);
-    }
-
-    function playWonSound() {
-        const wonSound = document.getElementById("won_sound");
-        wonSound.play();
-    }
-    function showMessage() {
-
-        msg.style.display = "flex"
-
-    }
-    function hideMessage() {
-
-        msg.style.display = "none"
-    }
-
-    function spin() {
-
-        const number1 = getElement("number1")
-        const number2 = getElement("number2")
-        const number3 = getElement("number3")
-
-        console.log(number1, number2, number3)
-
-        const num1 = getRandomNumber();
-        const num2 = getRandomNumber();
-        const num3 = getRandomNumber();
-
-        number1.innerHTML = `${num1}`
-        number2.innerHTML = `${num2}`
-        number3.innerHTML = `${num3}`
-
-
-        if (num1 === num2 && num1 === num3) {
-            playWonSound();
-            showMessage();
-        } else {
-            hideMessage();
-        }
-    }
-
+<script src="./script.js">
+    
 </script>
 
 </html>
