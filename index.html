@@ -1,50 +1,38 @@
 <html>
 <title>Slot Machine</title>
-<link rel="stylesheet" href="">
-<style>
-*{
-    margin: 0;
-    padding: 0;
-    font-family: monospace;
-
-}
+<link rel="stylesheet" href="./style.css">
 
 
-</style>
 <body>
-    
-    <h1>Play slot</h1>
-    <div>
-        <button onclick="">Lever</button>
+    <div class="container">
+        <h1>Play slot</h1>
+        <div class="container-lever">
+            <button class="lever" onclick="">Lever</button>
+        </div>
+        <table class="numbers-frame">
+            <tbody>
+                <tr>
+                    <td>
+                        <span id="number1" class="slot-number">1</span>
+                    </td>
+                    <td>
+                        <span id="number2" class="slot-number">2</span>
+                    </td>
+                    <td>
+                        <span id="number3" class="slot-number">3</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="message">
+            <p>You won!</p>
+        </div>
+
+        <audio id="you-won">
+            <source src="/win.mp3" type="audio/mpeg">
+        </audio>
     </div>
-    <table>
-        <tbody>
-            <tr>
-                <td>
-                    <span>1</span>
-                </td>
-                <td>
-                    <span>2</span>
-                </td>
-                <td>
-                    <span>3</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div>
-        <p>You won!</p>
-    </div>
-
-    <audio> 
-        <source src="/win.mp3" type="audio/mpeg">
-    </audio>
-
-
-
-
-
 </body>
 
 
@@ -52,4 +40,5 @@
 
 
 </script>
+
 </html>
