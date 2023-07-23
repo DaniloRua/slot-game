@@ -37,9 +37,9 @@ border: 1px red solid;
 
 }
 
-.message{
-    text-align: center;
+#message{
     display: none;
+    text-align: center;
     font-size: xx-large;
     color: red;
 }
