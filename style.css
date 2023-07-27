@@ -23,8 +23,8 @@ color: #250926;;
     align-items: center;
     gap:10rem;
     border: red solid 12px;
-    width: 20rem;
-    height: 20rem;
+    width: 30rem;
+    height: 30rem;
     border-radius: 2rem;
     
     /* animation: flip 1s ease-in-out infinite */
@@ -35,12 +35,12 @@ color: #250926;;
 .slot-number{
     font-size: 120px;
     border: 1px red solid;
-    margin: auto;
-    padding: auto;    
-    color: #360c36;;
-
+    background-color: antiquewhite;
+    color: #270927;
+    font-family: monospace;
+    font-size: 15rem;
+  
 }
-
 .lever{
 
 
